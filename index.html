@@ -39,6 +39,11 @@
             max-width: 150px; /* Set a fixed size for images */
             height: auto; /* Maintain aspect ratio */
         }
+        .image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Add some vertical margin */
+}
     </style>
 </head>
 <body>
@@ -127,7 +132,7 @@
 
     <h2>Method Overview</h2>
 <div class="image-container">
-    <img src="data/overview.jpg" alt="Method Overview" style="width: 600px;"> <!-- Set a specific width -->
+    <img src="data/overview.jpg" alt="Method Overview" class="responsive-image">
 </div>
     <p>
         We introduce a novel framework, SAT, for the task of monocular texture 3D human reconstruction, which comprises two key processes: United Geometry Learning (UGL) and Cascading Gaussian Texturing (CGT). Central to these processes are two innovative modules: Supervised Feature Regularization (SFR) and Online Animation Augmentation (OAA). In the UGL process, we extract different-modality geometric features from the input image using various prior models and integrate them into a united geometric learning network for reconstructing 3D human normal Gaussians. To enhance this process, the SFR module is employed. It involves training a multi-view supervisor model that generates multi-level supervisor feature maps, which serve as a regularizing force for monocular geometry learning. The CGT process aims to align with the output distribution of the UGL process while preventing cascading errors. It utilizes the 3D geometry human Gaussian derived from UGL, alongside the input image, to reconstruct the 3D texture Gaussian. To further boost reconstruction quality and address the limited availability of human 3D data, we introduce the OAA module. This module trains an animation model that dynamically generates more pose-varied 3D human samples, augmenting the existing dataset for enhanced model training.
