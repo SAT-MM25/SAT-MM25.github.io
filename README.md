@@ -777,31 +777,6 @@ Monocular texture 3D human reconstruction aims to create a complete 3D digital a
 ---
 
 
-# Animation
-<center>
-<table align="center">
-  <tr align="center">
-    <td align="center">
-      <img src="data/video_gif/0451_00073_03_00121_8views.gif" alt="Input Image" width="250px">
-    </td>
-    <td align="center">
-      <img src="data/video_gif/0558_00080_01_00161_8views.gif" alt="Ours" width="250px">
-    </td>
-    <td align="center">
-      <img src="data/video_gif/0210_00048_06_00041_8views.gif" alt="SiTH" width="250px">
-    </td>
-    <td align="center">
-      <img src="data/video_gif/0129_00032_06_00041_8views.gif" alt="Ours" width="250px">
-    </td>
-    <td align="center">
-      <img src="data/video_gif/0113_00029_05_00041_8views.gif" alt="SiTH" width="250px">
-    </td>
-  </tr>
-</table>
-</center>
-
----
-
 
 # Method Overview
 <center>
