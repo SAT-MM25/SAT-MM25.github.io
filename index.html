@@ -7,8 +7,20 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
             line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px; /* Set the max width for the content */
+            margin: 0 auto;
+            background-color: white; /* White background for the content area */
+            padding: 20px; /* Padding for the content area */
+            border-radius: 8px; /* Optional: rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
         }
         h1, h2, h3 {
             text-align: center;
@@ -24,103 +36,103 @@
             text-align: center;
         }
         img {
-            max-width: 100%;
+            max-width: 150px; /* Set a fixed size for images */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
 <body>
 
-<h1>SAT: Supervisor Regularization and Animation Augmentation for Two-process Monocular Texture 3D Human Reconstruction</h1>
+<div class="container">
+    <h1>SAT: Supervisor Regularization and Animation Augmentation for Two-process Monocular Texture 3D Human Reconstruction</h1>
 
-<h2>Abstract</h2>
-<p>
-    Monocular texture 3D human reconstruction aims to create a complete 3D digital avatar from just a single front-view human RGB image. However, the geometric ambiguity inherent in a single 2D image and the scarcity of 3D human training data are the main obstacles limiting progress in this field. To address these issues, current methods employ prior geometric estimation networks to derive various human geometric forms, such as the SMPL model and normal maps. However, they struggle to integrate these modalities effectively, leading to view inconsistencies, such as facial distortions. To this end, we propose a two-process 3D human reconstruction framework, SAT, which seamlessly learns various prior geometries in a unified manner and reconstructs high-quality textured 3D avatars as the final output. To further facilitate geometry learning, we introduce a Supervisor Feature Regularization module. By employing a multi-view network with the same structure to provide intermediate features as training supervision, these varied geometric priors can be better fused. To tackle data scarcity and further improve reconstruction quality, we also propose an Online Animation Augmentation module. By building a one-feed-forward animation network, we augment a massive number of samples from the original 3D human data online for model training. Extensive quantitative and qualitative experiments on two benchmarks show the superiority of our approach compared to state-of-the-art methods.
-</p>
+    <h2>Abstract</h2>
+    <p>
+        Monocular texture 3D human reconstruction aims to create a complete 3D digital avatar from just a single front-view human RGB image. However, the geometric ambiguity inherent in a single 2D image and the scarcity of 3D human training data are the main obstacles limiting progress in this field. To address these issues, current methods employ prior geometric estimation networks to derive various human geometric forms, such as the SMPL model and normal maps. However, they struggle to integrate these modalities effectively, leading to view inconsistencies, such as facial distortions. To this end, we propose a two-process 3D human reconstruction framework, SAT, which seamlessly learns various prior geometries in a unified manner and reconstructs high-quality textured 3D avatars as the final output. To further facilitate geometry learning, we introduce a Supervisor Feature Regularization module. By employing a multi-view network with the same structure to provide intermediate features as training supervision, these varied geometric priors can be better fused. To tackle data scarcity and further improve reconstruction quality, we also propose an Online Animation Augmentation module. By building a one-feed-forward animation network, we augment a massive number of samples from the original 3D human data online for model training. Extensive quantitative and qualitative experiments on two benchmarks show the superiority of our approach compared to state-of-the-art methods.
+    </p>
 
-<h2>Comparison with SOTA Methods</h2>
+    <h2>Comparison with SOTA Methods</h2>
 
-<!-- Comparison Table 1 -->
-<table>
-    <thead>
-        <tr>
-            <th>Input Image</th>
-            <th>Ours</th>
-            <th>PSHuman</th>
-            <th>GTA</th>
-            <th>ICON</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="data/ood_28/1095.jpg" alt="Input Image"></td>
-            <td><img src="data/texture/other_2_gif/ours.gif" alt="Ours"></td>
-            <td><img src="data/texture/other_2_gif/pshuman.gif" alt="PSHuman"></td>
-            <td><img src="data/texture/other_2_gif/GTA.gif" alt="GTA"></td>
-            <td><img src="data/texture/other_2_gif/ECON.gif" alt="ICON"></td>
-        </tr>
-        <tr>
-            <th>SiFU</th>
-            <th>SiTH</th>
-            <th>Human3diff</th>
-            <th>PiFu</th>
-            <th>ECON</th>
-        </tr>
-        <tr>
-            <td><img src="data/texture/other_2_gif/SiFU.gif" alt="SiFU"></td>
-            <td><img src="data/texture/other_2_gif/SiTH.gif" alt="SiTH"></td>
-            <td><img src="data/texture/other_2_gif/Human3diff.gif" alt="Human3diff"></td>
-            <td><img src="data/texture/other_2_gif/PiFU.gif" alt="PiFu"></td>
-            <td><img src="data/texture/other_2_gif/ECON.gif" alt="ECON"></td>
-        </tr>
-    </tbody>
-</table>
+    <!-- Comparison Table 1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Input Image</th>
+                <th>Ours</th>
+                <th>PSHuman</th>
+                <th>GTA</th>
+                <th>ICON</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="data/ood_28/1095.jpg" alt="Input Image"></td>
+                <td><img src="data/texture/other_2_gif/ours.gif" alt="Ours"></td>
+                <td><img src="data/texture/other_2_gif/pshuman.gif" alt="PSHuman"></td>
+                <td><img src="data/texture/other_2_gif/GTA.gif" alt="GTA"></td>
+                <td><img src="data/texture/other_2_gif/ECON.gif" alt="ICON"></td>
+            </tr>
+            <tr>
+                <th>SiFU</th>
+                <th>SiTH</th>
+                <th>Human3diff</th>
+                <th>PiFu</th>
+                <th>ECON</th>
+            </tr>
+            <tr>
+                <td><img src="data/texture/other_2_gif/SiFU.gif" alt="SiFU"></td>
+                <td><img src="data/texture/other_2_gif/SiTH.gif" alt="SiTH"></td>
+                <td><img src="data/texture/other_2_gif/Human3diff.gif" alt="Human3diff"></td>
+                <td><img src="data/texture/other_2_gif/PiFU.gif" alt="PiFu"></td>
+                <td><img src="data/texture/other_2_gif/ECON.gif" alt="ECON"></td>
+            </tr>
+        </tbody>
+    </table>
 
-<!-- Repeat similar tables for other comparisons -->
-<!-- Comparison Table 2 -->
-<table>
-    <thead>
-        <tr>
-            <th>Input Image</th>
-            <th>Ours</th>
-            <th>PSHuman</th>
-            <th>GTA</th>
-            <th>ICON</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img src="data/ood_28/1703.jpg" alt="Input Image"></td>
-            <td><img src="data/texture/other_10_gif/ours.gif" alt="Ours"></td>
-            <td><img src="data/texture/other_10_gif/pshuman.gif" alt="PSHuman"></td>
-            <td><img src="data/texture/other_10_gif/GTA.gif" alt="GTA"></td>
-            <td><img src="data/texture/other_10_gif/ECON.gif" alt="ICON"></td>
-        </tr>
-        <tr>
-            <th>SiFU</th>
-            <th>SiTH</th>
-            <th>Human3diff</th>
-            <th>PiFu</th>
-            <th>ECON</th>
-        </tr>
-        <tr>
-            <td><img src="data/texture/other_10_gif/SiFU.gif" alt="SiFU"></td>
-            <td><img src="data/texture/other_10_gif/SiTH.gif" alt="SiTH"></td>
-            <td><img src="data/texture/other_10_gif/Human3diff.gif" alt="Human3diff"></td>
-            <td><img src="data/texture/other_10_gif/PiFU.gif" alt="PiFu"></td>
-            <td><img src="data/texture/other_10_gif/ECON.gif" alt="ECON"></td>
-        </tr>
-    </tbody>
-</table>
+    <!-- Comparison Table 2 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Input Image</th>
+                <th>Ours</th>
+                <th>PSHuman</th>
+                <th>GTA</th>
+                <th>ICON</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="data/ood_28/1703.jpg" alt="Input Image"></td>
+                <td><img src="data/texture/other_10_gif/ours.gif" alt="Ours"></td>
+                <td><img src="data/texture/other_10_gif/pshuman.gif" alt="PSHuman"></td>
+                <td><img src="data/texture/other_10_gif/GTA.gif" alt="GTA"></td>
+                <td><img src="data/texture/other_10_gif/ECON.gif" alt="ICON"></td>
+            </tr>
+            <tr>
+                <th>SiFU</th>
+                <th>SiTH</th>
+                <th>Human3diff</th>
+                <th>PiFu</th>
+                <th>ECON</th>
+            </tr>
+            <tr>
+                <td><img src="data/texture/other_10_gif/SiFU.gif" alt="SiFU"></td>
+                <td><img src="data/texture/other_10_gif/SiTH.gif" alt="SiTH"></td>
+                <td><img src="data/texture/other_10_gif/Human3diff.gif" alt="Human3diff"></td>
+                <td><img src="data/texture/other_10_gif/PiFU.gif" alt="PiFu"></td>
+                <td><img src="data/texture/other_10_gif/ECON.gif" alt="ECON"></td>
+            </tr>
+        </tbody>
+    </table>
 
-<!-- Add additional comparison tables as necessary -->
-
-<h2>Method Overview</h2>
-<center>
-    <img src="data/overview.jpg" alt="Method Overview" width="900px">
-</center>
-<p>
-    We introduce a novel framework, SAT, for the task of monocular texture 3D human reconstruction, which comprises two key processes: United Geometry Learning (UGL) and Cascading Gaussian Texturing (CGT). Central to these processes are two innovative modules: Supervised Feature Regularization (SFR) and Online Animation Augmentation (OAA). In the UGL process, we extract different-modality geometric features from the input image using various prior models and integrate them into a united geometric learning network for reconstructing 3D human normal Gaussians. To enhance this process, the SFR module is employed. It involves training a multi-view supervisor model that generates multi-level supervisor feature maps, which serve as a regularizing force for monocular geometry learning. The CGT process aims to align with the output distribution of the UGL process while preventing cascading errors. It utilizes the 3D geometry human Gaussian derived from UGL, alongside the input image, to reconstruct the 3D texture Gaussian. To further boost reconstruction quality and address the limited availability of human 3D data, we introduce the OAA module. This module trains an animation model that dynamically generates more pose-varied 3D human samples, augmenting the existing dataset for enhanced model training.
-</p>
+    <h2>Method Overview</h2>
+    <center>
+        <img src="data/overview.jpg" alt="Method Overview" width="100%">
+    </center>
+    <p>
+        We introduce a novel framework, SAT, for the task of monocular texture 3D human reconstruction, which comprises two key processes: United Geometry Learning (UGL) and Cascading Gaussian Texturing (CGT). Central to these processes are two innovative modules: Supervised Feature Regularization (SFR) and Online Animation Augmentation (OAA). In the UGL process, we extract different-modality geometric features from the input image using various prior models and integrate them into a united geometric learning network for reconstructing 3D human normal Gaussians. To enhance this process, the SFR module is employed. It involves training a multi-view supervisor model that generates multi-level supervisor feature maps, which serve as a regularizing force for monocular geometry learning. The CGT process aims to align with the output distribution of the UGL process while preventing cascading errors. It utilizes the 3D geometry human Gaussian derived from UGL, alongside the input image, to reconstruct the 3D texture Gaussian. To further boost reconstruction quality and address the limited availability of human 3D data, we introduce the OAA module. This module trains an animation model that dynamically generates more pose-varied 3D human samples, augmenting the existing dataset for enhanced model training.
+    </p>
+</div>
 
 </body>
 </html>
